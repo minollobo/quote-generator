@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: url(contact-me-bg.jpg) center center no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 10px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        min-height: 200px;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+      }
+      h2 {
+        margin-top: -50px;
+      }
+      p {
+        color: rgb(85, 85, 85);
+        font-weight: 500;
+        font-size: 20px;
+        min-height: 75px;
+        line-height: 1.5;
+      }
+
+      h3 {
+        color: rgb(0, 0, 99);
+      }
+
+      button {
+        cursor: pointer;
+        font-size: 16px;
+        padding: 7px 15px;
+        border-radius: 3px;
+        border: 1px solid gray;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+      }
+
+      button:hover {
+        background-color: lightblue;
+        transition: 0.4s;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JAVASCRIPT QUOTE GENERATOR</h2>
+    <div class="container">
+      <p>
+        <q>
+          The best way to find yourself is to lose yourself in the service of
+          others.</q
+        >
+      </p>
+      <h3><cite>Mahatma Gandhi</cite></h3>
+      <button>Quote</button>
+    </div>
+    <script>
+      const btn = document.querySelector("button");
+      const quote = document.querySelector("p");
+      const author = document.querySelector("cite");
+
+      btn.addEventListener("click", function () {
+        for (let i = 0; i < quotes.length; i++) {
+          let random = Math.trunc(Math.random() * quotes.length);
+
+          quote.innerText = quotes[random].quote;
+          author.innerText = quotes[random].person;
+        }
+      });
+
+      const quotes = [
+        {
+          quote: `"The best way to find yourself is to lose yourself in the service of others."`,
+          person: ` Mahatma Gandhi`,
+        },
+        {
+          quote: `"If you want to live a happy life, tie it to a goal, not to people or things."`,
+          person: ` Albert Einstein`,
+        },
+        {
+          quote: `"At his best, man is the noblest of all animals; separated from law and justice he is the worst."`,
+          person: `Aristotle`,
+        },
+        {
+          quote: `"Your time is limited, so dont waste it living someone else's life."`,
+          person: ` Steve Jobs`,
+        },
+        {
+          quote: `"Tell me and I forget. Teach me and I remember. Involve me and I learn."`,
+          person: ` Benjamin Franklin`,
+        },
+        {
+          quote: `"If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough."`,
+          person: `Oprah Winfrey`,
+        },
+        {
+          quote: `"It does not matter how slowly you go as long as you do not stop."`,
+          person: `Confucius`,
+        },
+        {
+          quote: `"Our lives begin to end the day we become silent about things that matter."`,
+          person: `Martin Luther King, Jr.`,
+        },
+        {
+          quote: `"Remember that not getting what you want is sometimes a wonderful stroke of luck."`,
+          person: `Dalai Lama`,
+        },
+        {
+          quote: `"The journey of a thousand miles begins with one step."`,
+          person: `Lao Tzu`,
+        },
+      ];
+    </script>
+  </body>
+</html>
